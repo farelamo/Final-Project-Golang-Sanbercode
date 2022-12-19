@@ -1,0 +1,1588 @@
+{
+	"info": {
+		"_postman_id": "81c845a8-6821-4a20-be7a-188a6170bd56",
+		"name": "Final Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23104540"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get All User",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "farlam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/user",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/user",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Dec 2022 09:18:37 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "437"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"farelamo\",\n            \"username\": \"farlam\",\n            \"password\": \"test123\",\n            \"age\": 20,\n            \"payment_method\": \"offline\",\n            \"created_at\": \"2022-12-19T08:38:00.254357+07:00\",\n            \"updated_at\": \"2022-12-19T08:38:00.254357+07:00\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"test update\",\n            \"username\": \"test update\",\n            \"password\": \"test123 update\",\n            \"age\": 17,\n            \"payment_method\": \"online\",\n            \"created_at\": \"2022-12-19T16:15:57.53863+07:00\",\n            \"updated_at\": \"2022-12-19T16:17:46.095286+07:00\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get One User By Id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "farlam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/user/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get One User By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/user/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Dec 2022 09:18:30 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "222"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": true,\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"farelamo\",\n        \"username\": \"farlam\",\n        \"password\": \"test123\",\n        \"age\": 20,\n        \"payment_method\": \"offline\",\n        \"created_at\": \"2022-12-19T08:38:00.254357+07:00\",\n        \"updated_at\": \"2022-12-19T08:38:00.254357+07:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "farlam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test update\",\n    \"username\": \"test update\",\n    \"password\": \"test123 update\",\n    \"age\": 17,\n    \"payment_method\": \"online\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/user/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update User",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"test update\",\n    \"username\": \"test update\",\n    \"password\": \"test123 update\",\n    \"age\": 17,\n    \"payment_method\": \"online\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/user/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Dec 2022 09:17:46 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": true,\n    \"message\": \"Updated data amount 1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "farlam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/user/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete User",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/user/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Dec 2022 09:19:08 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": true,\n    \"message\": \"Deleted data amount 1\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test\",\n    \"username\": \"test\",\n    \"password\": \"test123\",\n    \"age\": 18,\n    \"payment_method\": \"online\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/user",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"test\",\n    \"username\": \"test\",\n    \"password\": \"test123\",\n    \"age\": 18,\n    \"payment_method\": \"online\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/user",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"user"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Dec 2022 09:19:38 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "194"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": true,\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"test\",\n        \"username\": \"test\",\n        \"age\": 18,\n        \"payment_method\": \"online\",\n        \"created_at\": \"2022-12-19T16:19:38.559136+07:00\",\n        \"updated_at\": \"2022-12-19T16:19:38.559136+07:00\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Film",
+			"item": [
+				{
+					"name": "Get All Film",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "farlam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/film",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"film"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Film",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/film",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"film"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Dec 2022 09:20:18 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "614"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": true,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"title\": \"test title\",\n            \"description\": \"test desc\",\n            \"genre\": \"horor\",\n            \"year\": 2018,\n            \"actor\": \"crush\",\n            \"created_at\": \"2022-12-19T09:37:15.188177+07:00\",\n            \"updated_at\": \"2022-12-19T09:37:15.188177+07:00\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"test title\",\n            \"description\": \"test desc\",\n            \"genre\": \"horor\",\n            \"year\": 2018,\n            \"actor\": \"crush\",\n            \"created_at\": \"2022-12-19T09:37:31.756787+07:00\",\n            \"updated_at\": \"2022-12-19T09:37:31.756787+07:00\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"test title\",\n            \"description\": \"test desc\",\n            \"genre\": \"comedy\",\n            \"year\": 2019,\n            \"actor\": \"steven\",\n            \"created_at\": \"2022-12-19T14:34:05.769132+07:00\",\n            \"updated_at\": \"2022-12-19T14:34:05.769132+07:00\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get One Film By Id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "farlam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/film/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"film",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get One Film By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/film/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"film",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Dec 2022 09:20:56 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "218"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": true,\n    \"data\": {\n        \"id\": 2,\n        \"title\": \"test title\",\n        \"description\": \"test desc\",\n        \"genre\": \"horor\",\n        \"year\": 2018,\n        \"actor\": \"crush\",\n        \"created_at\": \"2022-12-19T09:37:15.188177+07:00\",\n        \"updated_at\": \"2022-12-19T09:37:15.188177+07:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Film",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "farlam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"create title\",\n    \"description\": \"create desc\",\n    \"genre\": \"action\",\n    \"year\": 2015,\n    \"actor\": \"mr. Harry\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/film",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"film"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Film",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"create title\",\n    \"description\": \"create desc\",\n    \"genre\": \"action\",\n    \"year\": 2015,\n    \"actor\": \"mr. Harry\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/film",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"film"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Dec 2022 09:22:13 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "227"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": true,\n    \"data\": {\n        \"id\": 5,\n        \"title\": \"create title\",\n        \"description\": \"create desc\",\n        \"genre\": \"action\",\n        \"year\": 2015,\n        \"actor\": \"mr. Harry\",\n        \"created_at\": \"2022-12-19T16:22:13.053598+07:00\",\n        \"updated_at\": \"2022-12-19T16:22:13.053598+07:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Film",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "farlam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"update title\",\n    \"description\": \"update desc\",\n    \"genre\": \"Adventure\",\n    \"year\": 2010,\n    \"actor\": \"Sinta dan Jojo\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/film/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"film",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Film",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"update title\",\n    \"description\": \"update desc\",\n    \"genre\": \"Adventure\",\n    \"year\": 2010,\n    \"actor\": \"Sinta dan Jojo\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/film/4",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"film",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Dec 2022 09:23:35 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": true,\n    \"message\": \"Updated data amount 1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Film",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "farlam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/film/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"film",
+								"5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Film",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/film/5",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"film",
+										"5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Dec 2022 09:24:04 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": true,\n    \"message\": \"Deleted data amount 1\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Studio",
+			"item": [
+				{
+					"name": "Get All Studio",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "farlam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/studio",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"studio"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Studio",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/studio",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"studio"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Dec 2022 09:25:02 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1028"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": true,\n    \"data\": [\n        {\n            \"id\": 3,\n            \"name\": \"studio 1\",\n            \"film_id\": {\n                \"id\": 3,\n                \"title\": \"test title\",\n                \"description\": \"test desc\",\n                \"genre\": \"horor\",\n                \"year\": 2018,\n                \"actor\": \"crush\",\n                \"created_at\": \"2022-12-19T09:37:31.756787+07:00\",\n                \"updated_at\": \"2022-12-19T09:37:31.756787+07:00\"\n            },\n            \"created_at\": \"2022-12-19T09:37:38.371296+07:00\",\n            \"updated_at\": \"2022-12-19T09:37:38.371296+07:00\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"studio 2\",\n            \"film_id\": {\n                \"id\": 4,\n                \"title\": \"update title\",\n                \"description\": \"update desc\",\n                \"genre\": \"Adventure\",\n                \"year\": 2010,\n                \"actor\": \"Sinta dan Jojo\",\n                \"created_at\": \"2022-12-19T14:34:05.769132+07:00\",\n                \"updated_at\": \"2022-12-19T16:23:35.910942+07:00\"\n            },\n            \"created_at\": \"2022-12-19T14:34:58.843734+07:00\",\n            \"updated_at\": \"2022-12-19T14:34:58.843734+07:00\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"studio 3\",\n            \"film_id\": {\n                \"id\": 3,\n                \"title\": \"test title\",\n                \"description\": \"test desc\",\n                \"genre\": \"horor\",\n                \"year\": 2018,\n                \"actor\": \"crush\",\n                \"created_at\": \"2022-12-19T09:37:31.756787+07:00\",\n                \"updated_at\": \"2022-12-19T09:37:31.756787+07:00\"\n            },\n            \"created_at\": \"2022-12-19T14:35:28.763472+07:00\",\n            \"updated_at\": \"2022-12-19T14:35:28.763472+07:00\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get One Studio By Id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "farlam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/studio/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"studio",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get One Studio By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/studio/4",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"studio",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Dec 2022 09:26:19 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "368"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": true,\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"studio 2\",\n        \"film_id\": {\n            \"id\": 4,\n            \"title\": \"update title\",\n            \"description\": \"update desc\",\n            \"genre\": \"Adventure\",\n            \"year\": 2010,\n            \"actor\": \"Sinta dan Jojo\",\n            \"created_at\": \"2022-12-19T14:34:05.769132+07:00\",\n            \"updated_at\": \"2022-12-19T16:23:35.910942+07:00\"\n        },\n        \"created_at\": \"2022-12-19T14:34:58.843734+07:00\",\n        \"updated_at\": \"2022-12-19T14:34:58.843734+07:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Studio",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "farlam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"studio 8\",\n    \"film_id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/studio",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"studio"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Studio",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"studio 8\",\n    \"film_id\": 2\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/studio",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"studio"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Dec 2022 09:27:49 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "157"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": true,\n    \"data\": {\n        \"id\": 6,\n        \"name\": \"studio 8\",\n        \"film_id\": 2,\n        \"created_at\": \"2022-12-19T16:27:49.324405+07:00\",\n        \"updated_at\": \"2022-12-19T16:27:49.324405+07:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Studio",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "farlam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"studio 8\",\n    \"film_id\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/studio/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"studio",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Studio",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"studio 8\",\n    \"film_id\": 4\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/studio/6",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"studio",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Dec 2022 09:28:51 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": true,\n    \"message\": \"Updated data amount 1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Studio",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "farlam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/studio/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"studio",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Studio",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/studio/6",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"studio",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Dec 2022 09:29:19 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": true,\n    \"message\": \"Deleted data amount 1\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Tiket",
+			"item": [
+				{
+					"name": "Get All Ticket",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "farlam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/ticket",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"ticket"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Ticket",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/ticket",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"ticket"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Dec 2022 09:30:32 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": true,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"type\": \"double-seat\",\n            \"user_id\": {\n                \"id\": 1,\n                \"name\": \"farelamo\",\n                \"username\": \"farlam\",\n                \"password\": \"test123\",\n                \"age\": 20,\n                \"payment_method\": \"offline\",\n                \"created_at\": \"2022-12-19T08:38:00.254357+07:00\",\n                \"updated_at\": \"2022-12-19T08:38:00.254357+07:00\"\n            },\n            \"studio_id\": {\n                \"id\": 3,\n                \"name\": \"studio 1\",\n                \"film_id\": {\n                    \"id\": 3,\n                    \"title\": \"test title\",\n                    \"description\": \"test desc\",\n                    \"genre\": \"horor\",\n                    \"year\": 2018,\n                    \"actor\": \"crush\",\n                    \"created_at\": \"2022-12-19T09:37:31.756787+07:00\",\n                    \"updated_at\": \"2022-12-19T09:37:31.756787+07:00\"\n                },\n                \"created_at\": \"2022-12-19T09:37:38.371296+07:00\",\n                \"updated_at\": \"2022-12-19T09:37:38.371296+07:00\"\n            },\n            \"created_at\": \"2022-12-19T11:17:25.132062+07:00\",\n            \"updated_at\": \"2022-12-19T11:17:25.132062+07:00\"\n        },\n        {\n            \"id\": 3,\n            \"type\": \"single-seat\",\n            \"user_id\": {\n                \"id\": 1,\n                \"name\": \"farelamo\",\n                \"username\": \"farlam\",\n                \"password\": \"test123\",\n                \"age\": 20,\n                \"payment_method\": \"offline\",\n                \"created_at\": \"2022-12-19T08:38:00.254357+07:00\",\n                \"updated_at\": \"2022-12-19T08:38:00.254357+07:00\"\n            },\n            \"studio_id\": {\n                \"id\": 4,\n                \"name\": \"studio 2\",\n                \"film_id\": {\n                    \"id\": 4,\n                    \"title\": \"update title\",\n                    \"description\": \"update desc\",\n                    \"genre\": \"Adventure\",\n                    \"year\": 2010,\n                    \"actor\": \"Sinta dan Jojo\",\n                    \"created_at\": \"2022-12-19T14:34:05.769132+07:00\",\n                    \"updated_at\": \"2022-12-19T16:23:35.910942+07:00\"\n                },\n                \"created_at\": \"2022-12-19T14:34:58.843734+07:00\",\n                \"updated_at\": \"2022-12-19T14:34:58.843734+07:00\"\n            },\n            \"created_at\": \"2022-12-19T14:36:15.752254+07:00\",\n            \"updated_at\": \"2022-12-19T14:36:15.752254+07:00\"\n        },\n        {\n            \"id\": 4,\n            \"type\": \"premium-seat\",\n            \"user_id\": {\n                \"id\": 1,\n                \"name\": \"farelamo\",\n                \"username\": \"farlam\",\n                \"password\": \"test123\",\n                \"age\": 20,\n                \"payment_method\": \"offline\",\n                \"created_at\": \"2022-12-19T08:38:00.254357+07:00\",\n                \"updated_at\": \"2022-12-19T08:38:00.254357+07:00\"\n            },\n            \"studio_id\": {\n                \"id\": 5,\n                \"name\": \"studio 3\",\n                \"film_id\": {\n                    \"id\": 3,\n                    \"title\": \"test title\",\n                    \"description\": \"test desc\",\n                    \"genre\": \"horor\",\n                    \"year\": 2018,\n                    \"actor\": \"crush\",\n                    \"created_at\": \"2022-12-19T09:37:31.756787+07:00\",\n                    \"updated_at\": \"2022-12-19T09:37:31.756787+07:00\"\n                },\n                \"created_at\": \"2022-12-19T14:35:28.763472+07:00\",\n                \"updated_at\": \"2022-12-19T14:35:28.763472+07:00\"\n            },\n            \"created_at\": \"2022-12-19T14:36:24.103535+07:00\",\n            \"updated_at\": \"2022-12-19T14:36:24.103535+07:00\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get One Ticket By Id",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "farlam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/ticket/2",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"ticket",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get One Ticket By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/ticket/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"ticket",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Dec 2022 09:31:20 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "699"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": true,\n    \"data\": {\n        \"id\": 2,\n        \"type\": \"double-seat\",\n        \"user_id\": {\n            \"id\": 1,\n            \"name\": \"farelamo\",\n            \"username\": \"farlam\",\n            \"password\": \"test123\",\n            \"age\": 20,\n            \"payment_method\": \"offline\",\n            \"created_at\": \"2022-12-19T08:38:00.254357+07:00\",\n            \"updated_at\": \"2022-12-19T08:38:00.254357+07:00\"\n        },\n        \"studio_id\": {\n            \"id\": 3,\n            \"name\": \"studio 1\",\n            \"film_id\": {\n                \"id\": 3,\n                \"title\": \"test title\",\n                \"description\": \"test desc\",\n                \"genre\": \"horor\",\n                \"year\": 2018,\n                \"actor\": \"crush\",\n                \"created_at\": \"2022-12-19T09:37:31.756787+07:00\",\n                \"updated_at\": \"2022-12-19T09:37:31.756787+07:00\"\n            },\n            \"created_at\": \"2022-12-19T09:37:38.371296+07:00\",\n            \"updated_at\": \"2022-12-19T09:37:38.371296+07:00\"\n        },\n        \"created_at\": \"2022-12-19T11:17:25.132062+07:00\",\n        \"updated_at\": \"2022-12-19T11:17:25.132062+07:00\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Ticket",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "farlam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"regular-seat\",\n    \"user_id\": 1,\n    \"studio_id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/ticket",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"ticket"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Ticket",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"type\": \"regular-seat\",\n    \"user_id\": 1,\n    \"studio_id\": 3\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/ticket",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"ticket"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Dec 2022 09:32:44 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "152"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 6,\n    \"type\": \"regular-seat\",\n    \"user_id\": 1,\n    \"studio_id\": 3,\n    \"created_at\": \"2022-12-19T16:32:44.730048+07:00\",\n    \"updated_at\": \"2022-12-19T16:32:44.730048+07:00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Ticket ",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "farlam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"double-seat\",\n    \"user_id\": 1,\n    \"studio_id\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/ticket/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"ticket",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Ticket ",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"type\": \"double-seat\",\n    \"user_id\": 1,\n    \"studio_id\": 4\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/ticket/6",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"ticket",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Dec 2022 09:33:41 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": true,\n    \"message\": \"Updated data amount 1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Ticket",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "test123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "farlam",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8000/ticket/6",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"ticket",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Ticket",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/ticket/6",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"ticket",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Dec 2022 09:34:07 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Status\": true,\n    \"message\": \"Deleted data amount 1\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
