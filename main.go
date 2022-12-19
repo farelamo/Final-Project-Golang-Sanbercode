@@ -3,7 +3,6 @@ package main
 import (
 	"FinalProject/config"
 	"FinalProject/middleware"
-	"fmt"
 	"os"
 
 	"FinalProject/controllers/filmController"

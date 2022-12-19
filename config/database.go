@@ -19,6 +19,12 @@ var (
 
 
 func Connect() *sql.DB {
+	err := godotenv.Load("./.env")
+	if err != nil {
+		fmt.Println("Failed load file environment")
+	}else {
+		fmt.Println("Success read file environment")
+	}
 	port, _ := strconv.Atoi(os.Getenv("PGPORT"))
 
 	psqlInfo := fmt.Sprintf(
