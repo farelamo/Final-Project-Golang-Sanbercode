@@ -4,18 +4,13 @@ import (
 	"FinalProject/config/migrations"
 	"database/sql"
 	"fmt"
+	"os"
+	"strconv"
 
-	_"github.com/lib/pq"
+	"github.com/joho/godotenv"
+
+	_ "github.com/lib/pq"
 )
-
-const (
-	Host	 = "localhost"
-	Port	 = 5432
-	User	 = "postgres"
-	Password = "root"
-	DbName	 = "FinalProject"
-)
-
 
 var (
 	DB  *sql.DB
@@ -24,10 +19,16 @@ var (
 
 
 func Connect() *sql.DB {
+	port, _ := strconv.Atoi(os.Getenv("PGPORT"))
+
 	psqlInfo := fmt.Sprintf(
 					"host=%s port=%d user=%s password=%s dbname=%s sslmode=disable",
-					Host, Port, User, Password, DbName,
-				)
+					os.Getenv("PGHOST"), 
+					port, 
+					os.Getenv("PGUSER"), 
+					os.Getenv("PGPASSWORD"), 
+					os.Getenv("PGDATABASE"),
+			)
 
 	DB, Err = sql.Open("postgres", psqlInfo)
 	if Err != nil {

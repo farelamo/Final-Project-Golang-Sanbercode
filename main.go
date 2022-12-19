@@ -1,19 +1,20 @@
 package main
 
 import (
-	"fmt"
 	"FinalProject/config"
 	"FinalProject/middleware"
+	"fmt"
+	"os"
 
-	"FinalProject/controllers/userController"
 	"FinalProject/controllers/filmController"
 	"FinalProject/controllers/studioController"
 	"FinalProject/controllers/ticketController"
+	"FinalProject/controllers/userController"
 
-	"FinalProject/services/userService"
 	"FinalProject/services/filmService"
 	"FinalProject/services/studioService"
 	"FinalProject/services/ticketService"
+	"FinalProject/services/userService"
 
 	"github.com/gin-gonic/gin"
 )
@@ -62,6 +63,5 @@ func main(){
 	router.PUT("/ticket/:id", middleware.Authenticate, ticketController.UpdateTicket)
 	router.DELETE("/ticket/:id", middleware.Authenticate, ticketController.DeleteTicket)
 
-	runWithPort := fmt.Sprintf("0.0.0.0:%s", "8000")
-	router.Run(runWithPort)
+	router.Run(":" + os.Getenv("PORT"))
 }
