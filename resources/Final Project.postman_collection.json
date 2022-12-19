@@ -30,11 +30,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/user",
+							"raw": "{{url}}/user",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"user"
 							]
@@ -100,11 +99,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/user/1",
+							"raw": "{{url}}/user/1",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"user",
 								"1"
@@ -181,11 +179,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8000/user/2",
+							"raw": "{{url}}/user/2",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"user",
 								"2"
@@ -262,11 +259,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/user/2",
+							"raw": "{{url}}/user/2",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"user",
 								"2"
@@ -333,11 +329,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8000/user",
+							"raw": "{{url}}/user",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"user"
 							]
@@ -417,11 +412,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/film",
+							"raw": "{{url}}/film",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"film"
 							]
@@ -487,11 +481,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/film/2",
+							"raw": "{{url}}/film/2",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"film",
 								"2"
@@ -568,11 +561,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8000/film",
+							"raw": "{{url}}/film",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"film"
 							]
@@ -656,11 +648,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8000/film/4",
+							"raw": "{{url}}/film/4",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"film",
 								"4"
@@ -737,11 +728,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/film/5",
+							"raw": "{{url}}/film/5",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"film",
 								"5"
@@ -814,11 +804,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/studio",
+							"raw": "{{url}}/studio",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"studio"
 							]
@@ -884,11 +873,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/studio/4",
+							"raw": "{{url}}/studio/4",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"studio",
 								"4"
@@ -965,11 +953,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8000/studio",
+							"raw": "{{url}}/studio",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"studio"
 							]
@@ -1053,11 +1040,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8000/studio/6",
+							"raw": "{{url}}/studio/6",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"studio",
 								"6"
@@ -1134,11 +1120,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/studio/6",
+							"raw": "{{url}}/studio/6",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"studio",
 								"6"
@@ -1211,11 +1196,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/ticket",
+							"raw": "{{url}}/ticket",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"ticket"
 							]
@@ -1281,11 +1265,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/ticket/2",
+							"raw": "{{url}}/ticket/2",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"ticket",
 								"2"
@@ -1362,11 +1345,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8000/ticket",
+							"raw": "{{url}}/ticket",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"ticket"
 							]
@@ -1450,11 +1432,10 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8000/ticket/6",
+							"raw": "{{url}}/ticket/6",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"ticket",
 								"6"
@@ -1531,11 +1512,10 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:8000/ticket/6",
+							"raw": "{{url}}/ticket/6",
 							"host": [
-								"localhost"
+								"{{url}}"
 							],
-							"port": "8000",
 							"path": [
 								"ticket",
 								"6"
